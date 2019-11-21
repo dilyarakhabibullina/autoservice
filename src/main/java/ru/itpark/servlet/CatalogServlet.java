@@ -21,6 +21,7 @@ public class CatalogServlet extends HttpServlet {
         InitialContext context = null;
         try {
             context = new InitialContext();
+            //что означают строки ниже? папки comp, env, bean?
             autoService = (AutoService) context.lookup("java:/comp/env/bean/auto-service");
             fileService = (FileService) context.lookup("java:/comp/env/bean/file-service");
         } catch (NamingException e) {
@@ -40,7 +41,7 @@ public class CatalogServlet extends HttpServlet {
             throw new ServletException(e);
         }
     }
-
+//что означает req.getPart?
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {

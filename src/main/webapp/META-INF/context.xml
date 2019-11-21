@@ -3,7 +3,7 @@
     <Resource
             name="jdbc/db"
             auth="Container"
-            type="javax.sql.DataSourse"
+            type="javax.sql.DataSource"
             driverClassName="org.sqlite.JDBC"
             url="jdbc:sqlite::memory:"
             closeMethod="close"
