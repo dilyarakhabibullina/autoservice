@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 public class Auto {
                private String id;
                private String name;
-               private String image;
                private String description;
+               private String image;
     }
 
