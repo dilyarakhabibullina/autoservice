@@ -46,7 +46,7 @@ public class AutoService {
         try (var conn = ds.getConnection()) {
             try (var stmt = conn.prepareStatement("INSERT INTO autos (id, name, description, image) VALUES (?, ?, ?, ?)")) {
                 stmt.setString(1, UUID.randomUUID().toString());
-                stmt.setString(2, name);
+                stmt.setString(2, name.toLowerCase());
                 stmt.setString(3, description);
                 stmt.setString(4, image);
                 stmt.execute();
